@@ -1,0 +1,6 @@
+# Send message
+#POST    /message                    controllers.Messages.create
+
+# Get message
+#GET     /message                    controllers.Messages.list
+#GET     /message/:id                controllers.Messages.get(id:Long)
