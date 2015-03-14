@@ -1,6 +1,6 @@
 # Send message
-#POST    /message                    controllers.Messages.create
+POST    /message                    controllers.MessageApi.save
 
 # Get message
-#GET     /message                    controllers.Messages.list
-#GET     /message/:id                controllers.Messages.get(id:Long)
+GET     /message                    controllers.MessageApi.list
+GET     /message/:id                controllers.MessageApi.get(id:Long)
