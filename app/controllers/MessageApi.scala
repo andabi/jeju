@@ -15,7 +15,7 @@ object MessageApi extends Controller {
     def writes(message: Message) = Json.obj(
       "writer" -> message.writer,
       "content" -> message.content,
-      "created_at" -> message.created_at.toString(ISODateTimeFormat.dateTimeNoMillis)
+      "created_at" -> message.created_at.toString(ISODateTimeFormat.dateTime)
     )
   }
 
@@ -32,7 +32,7 @@ object MessageApi extends Controller {
 
     val form = Form(
       mapping(
-        "after" -> optional(jodaDate("yyyy-MM-dd'T'HH:mm:ssZZ"))
+        "after" -> optional(jodaDate("yyyy-MM-dd'T'HH:mm:ss.sssZZ"))
       )(FormData.apply)(FormData.unapply)
     )
 
